@@ -1,8 +1,6 @@
-import React from 'react';
-function App() {
-  return (
-    <></>
-  );
+import React, { ReactElement } from 'react'
+function App(): ReactElement {
+    return <></>
 }
 
-export default App;
+export default App
