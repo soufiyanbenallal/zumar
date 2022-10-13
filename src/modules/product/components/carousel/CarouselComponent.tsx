@@ -2,18 +2,9 @@ import React, { ReactElement, useCallback, useState } from 'react'
 import styles from './Carousel.module.scss'
 import { Swiper as SwiperComponent, SwiperSlide } from 'swiper/react'
 import Swipe, { Thumbs } from 'swiper'
-const LIST_IMAGES = [
-  'https://swiperjs.com/demos/images/nature-1.jpg',
-  'https://swiperjs.com/demos/images/nature-2.jpg',
-  'https://swiperjs.com/demos/images/nature-3.jpg',
-  'https://swiperjs.com/demos/images/nature-4.jpg',
-  'https://swiperjs.com/demos/images/nature-5.jpg',
-  'https://swiperjs.com/demos/images/nature-6.jpg',
-  'https://swiperjs.com/demos/images/nature-7.jpg',
-  'https://swiperjs.com/demos/images/nature-8.jpg',
-  'https://swiperjs.com/demos/images/nature-9.jpg',
-  'https://swiperjs.com/demos/images/nature-10.jpg',
-]
+import classNames from 'classnames'
+import { LIST_IMAGES } from './Carousel.const'
+
 export default function CarouselComponent({ className }: { className?: string }): ReactElement {
   const [thumbsSwiper, setThumbsSwiper] = useState<Swipe | null>(null)
 
@@ -21,10 +12,10 @@ export default function CarouselComponent({ className }: { className?: string })
     setThumbsSwiper(val)
   }, [])
   const sliders = useCallback(
-    (): ReactElement[] =>
+    (classes: string): ReactElement[] =>
       LIST_IMAGES.map((url, key) => {
         return (
-          <SwiperSlide key={key}>
+          <SwiperSlide key={key} className={classes}>
             <img src={url} alt={url} loading='lazy' />
           </SwiperSlide>
         )
@@ -33,7 +24,7 @@ export default function CarouselComponent({ className }: { className?: string })
   )
 
   return (
-    <article className={className}>
+    <article className={classNames(className, styles.carousel)}>
       <SwiperComponent
         style={{ width: '100%' }}
         spaceBetween={10}
@@ -44,11 +35,11 @@ export default function CarouselComponent({ className }: { className?: string })
         modules={[Thumbs]}
         className='mySwiper2'
       >
-        {sliders()}
+        {sliders(styles.slideMain)}
       </SwiperComponent>
       <SwiperComponent
         style={{ width: '100%' }}
-        onSwiper={setThumbsSwiper}
+        onSwiper={handleThumbSwiper}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
@@ -56,7 +47,7 @@ export default function CarouselComponent({ className }: { className?: string })
         modules={[Thumbs]}
         className='mySwiper'
       >
-        {sliders()}
+        {sliders(styles.slideThumb)}
       </SwiperComponent>
     </article>
   )

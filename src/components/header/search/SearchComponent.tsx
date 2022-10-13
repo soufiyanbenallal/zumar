@@ -1,7 +1,8 @@
-import React from 'react'
-import CategoriesComponent from '@/components/header/search/categories/CategoriesComponent'
+import React, { ReactElement } from 'react'
+import CategoriesComponent from '@components/header/search/categories/CategoriesComponent'
+import { IBaseProps } from '@/interfaces'
 
-export default function SearchComponent({ className }: { className?: string }) {
+export default function SearchComponent({ className }: IBaseProps): ReactElement {
   return (
     <div className={className}>
       <CategoriesComponent />

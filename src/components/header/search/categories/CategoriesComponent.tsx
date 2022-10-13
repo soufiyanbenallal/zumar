@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
 import { Listbox } from '@headlessui/react'
 
 const people = [
@@ -10,7 +9,7 @@ const people = [
   { id: 5, name: 'Category 4', unavailable: true },
 ]
 
-export default function CategoriesComponent() {
+export default function CategoriesComponent(): ReactElement {
   const [selectedPerson, setSelectedPerson] = useState(people[0])
 
   return (

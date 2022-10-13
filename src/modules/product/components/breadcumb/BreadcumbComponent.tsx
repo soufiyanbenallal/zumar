@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import styles from './Breadcumb.module.scss'
-export default function BreadcumbComponent() {
+export default function BreadcumbComponent(): ReactElement {
   return (
     <section>
       <div>

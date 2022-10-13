@@ -1,0 +1,12 @@
+.carousel {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .slideMain img {
+    width: 100%;
+  }
+  .slideThumb img {
+    width: 100%;
+  }
+}
