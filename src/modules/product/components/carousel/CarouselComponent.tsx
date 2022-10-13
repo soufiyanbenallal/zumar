@@ -1,10 +1,6 @@
 import React, { ReactElement, useCallback, useState } from 'react'
 import styles from './Carousel.module.scss'
-import {
-    Swiper as SwiperComponent,
-    SwiperProps,
-    SwiperSlide,
-} from 'swiper/react'
+import { Swiper as SwiperComponent, SwiperSlide } from 'swiper/react'
 import Swipe, { Thumbs } from 'swiper'
 type ThumbType = ((swiper: any) => void) | undefined
 const LIST_IMAGES = [
@@ -46,26 +42,31 @@ export default function CarouselComponent({
 
     return (
         <article className={className}>
-            {/* <SwiperComponent
-        spaceBetween={10}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-        modules={[ Thumbs]}
-        className="mySwiper2"
-      >
-        {sliders()}
-      </SwiperComponent>
-      <SwiperComponent
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[ Thumbs]}
-        className="mySwiper"
-      >
-       {sliders()}
-      </SwiperComponent> */}
+            <SwiperComponent
+                spaceBetween={10}
+                navigation={true}
+                thumbs={{
+                    swiper:
+                        thumbsSwiper && !thumbsSwiper.destroyed
+                            ? thumbsSwiper
+                            : null,
+                }}
+                modules={[Thumbs]}
+                className="mySwiper2"
+            >
+                {sliders()}
+            </SwiperComponent>
+            <SwiperComponent
+                onSwiper={setThumbsSwiper}
+                spaceBetween={10}
+                slidesPerView={4}
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[Thumbs]}
+                className="mySwiper"
+            >
+                {sliders()}
+            </SwiperComponent>
         </article>
     )
 }
