@@ -1,10 +1,10 @@
 export enum MenuEnum {
-    SERVICES = 'Services',
-    ORDERS = 'Orders',
-    ACCOUNT = 'Account',
+  SERVICES = 'Services',
+  ORDERS = 'Orders',
+  ACCOUNT = 'Account',
 }
 export enum MenuPathEnum {
-    SERVICES = '/services',
-    ORDERS = '/orders',
-    ACCOUNT = '/account',
+  SERVICES = '/services',
+  ORDERS = '/orders',
+  ACCOUNT = '/account',
 }
