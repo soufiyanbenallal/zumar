@@ -1,0 +1,13 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/global.scss';
+.rate {
+  display: flex;
+  .count {
+    font-family: $font-family-semibold;
+    font-size: px(18);
+    line-height: px(32);
+    .votes {
+      color: $color-gray-2;
+    }
+  }
+}
