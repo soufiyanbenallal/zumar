@@ -9,8 +9,10 @@ export default function SearchComponent({ className }: IBaseProps): ReactElement
     <form className={classNames(styles.form, className)}>
       <CategoriesComponent />
       <div className={styles.control}>
-        <SearchIcon />
-        <input type='text' placeholder='Search by product name or seller' />
+        <button>
+          <SearchIcon />
+        </button>
+        <input type='text' name='q' placeholder='Search by product name or seller' />
       </div>
     </form>
   )

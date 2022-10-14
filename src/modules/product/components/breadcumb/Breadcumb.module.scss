@@ -1,6 +1,17 @@
 @import '../../../../styles/variables.scss';
 @import '../../../../styles/mixins.scss';
+@import '../../../../styles/global.scss';
 .container {
   @include container;
-  padding: 2rem 0;
+  @include v-center;
+  height: px(85);
+  gap: px(10);
+  .item {
+    @include v-center;
+    color: $color-gray-3;
+    gap: px(10);
+    a {
+      color: $color-gray-3;
+    }
+  }
 }

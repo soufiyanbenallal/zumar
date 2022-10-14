@@ -6,11 +6,9 @@
   @include v-center;
   gap: px(26);
   .menu {
+    @include native-button;
     width: px(40);
     height: px(40);
-    background: none;
-    border: none;
-    outline: none;
     display: flex;
     flex-direction: column;
     gap: px(9);
@@ -22,9 +20,7 @@
     }
   }
   .bag {
-    background: none;
-    border: none;
-    outline: none;
+    @include native-button;
     position: relative;
     height: px(31);
     display: flex;

@@ -8,12 +8,16 @@
   .control {
     @include v-center;
     gap: px(10);
+    button {
+      @include native-button;
+    }
     input {
       height: px(42);
       font-size: px(16);
       padding: 0 px(10);
       min-width: px(400);
       border: none;
+      outline: none;
       &::placeholder {
         color: rgba(0, 0, 0, 0.2);
       }
