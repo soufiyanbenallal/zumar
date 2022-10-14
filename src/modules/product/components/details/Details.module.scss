@@ -1,5 +1,6 @@
 @import '../../../../styles/variables.scss';
 @import '../../../../styles/global.scss';
+@import '../../../../styles/mixins.scss';
 .title {
   font-family: $font-family-semibold;
   font-size: px(24);
@@ -8,8 +9,9 @@
 }
 .flex {
   display: flex;
-  justify-content: space-between;
+  gap: px(52);
   .code {
+    @include v-center;
     font-family: $font-family-medium;
     font-size: px(16);
     line-height: px(22);

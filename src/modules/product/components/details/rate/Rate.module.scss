@@ -1,13 +1,18 @@
 @import '../../../../../styles/variables.scss';
 @import '../../../../../styles/global.scss';
+@import '../../../../../styles/mixins.scss';
 .rate {
   display: flex;
   .count {
     font-family: $font-family-semibold;
     font-size: px(18);
     line-height: px(32);
+    @include v-center;
     .votes {
       color: $color-gray-2;
     }
   }
+}
+.stars {
+  @include v-center;
 }

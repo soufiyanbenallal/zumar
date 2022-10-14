@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+@import '../../styles/global.scss';
+.button {
+  border-radius: $radius;
+  color: $color-white;
+  font-size: px(14);
+  font-family: $font-family-bold;
+  border: none;
+  padding: px(10) px(20);
+  display: flex;
+  align-items: center;
+  gap: px(10);
+  &.primary {
+    background-color: $primary-color-blue;
+    &:hover {
+      background-color: $primary-color-blue-hover;
+    }
+  }
+  &.secondary {
+    background-color: $primary-color-green;
+    &:hover {
+      background-color: $primary-color-green-hover;
+    }
+  }
+}

@@ -1,17 +1,26 @@
 @mixin breakpoint-mobile {
-    @media only screen and (max-width: $sm) {
-        @content;
-    }
+  @media only screen and (max-width: $sm) {
+    @content;
+  }
 }
 
 @mixin breakpoint-ipad {
-    @media only screen and (max-width: $ipad) {
-        @content;
-    }
+  @media only screen and (max-width: $ipad) {
+    @content;
+  }
 }
 
 @mixin container {
-    width: 100%;
-    max-width: $max;
-    margin: 0 auto;
+  width: 100%;
+  max-width: $max;
+  margin: 0 auto;
+}
+
+@mixin v-center {
+  display: flex;
+  align-items: center;
+}
+@mixin h-center {
+  display: flex;
+  justify-content: center;
 }

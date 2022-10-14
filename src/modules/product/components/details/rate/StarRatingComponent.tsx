@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import { ReactComponent as StarIcon } from '@assets/icons/StarIcon.svg'
+import styles from './Rate.module.scss'
 
 interface IStarRatingProps {
   count?: number
@@ -27,19 +28,14 @@ export default function StarRatingComponent(props: IStarRatingProps): ReactEleme
   }
 
   return (
-    <div>
+    <div className={styles.stars}>
       {stars.map((s, index) => {
         let style = inactiveColor
         if (index < value) {
           style = activeColor
         }
         return (
-          <span
-            className={'star'}
-            key={index}
-            style={{ color: style, width: size, height: size, fontSize: size }}
-            onClick={() => handleChange(index)}
-          >
+          <span key={index} style={{ color: style }} onClick={() => handleChange(index)}>
             {s}
           </span>
         )

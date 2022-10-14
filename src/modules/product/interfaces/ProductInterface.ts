@@ -3,8 +3,8 @@ export interface IRate {
   value: number
   votes: number
 }
-export interface ISize {
-  pieces: string
+export interface IPieces {
+  range: string
   price: number
   currency: keyof typeof CurrencyEnum
 }
@@ -26,7 +26,7 @@ export interface IProduct {
   price: number
   currency: keyof typeof CurrencyEnum
   variants: {
-    size: ISize[]
+    pieces: IPieces[]
     colors: string[]
     storage: IStorage[]
     shipping: IShipping[]

@@ -1,5 +1,9 @@
 import React, { ReactElement } from 'react'
 
 export default function ShippingComponent(): ReactElement {
-  return <div>ShippingComponent</div>
+  return (
+    <div>
+      <h4>Shipping</h4>
+    </div>
+  )
 }

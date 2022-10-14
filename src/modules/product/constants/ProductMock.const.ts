@@ -17,10 +17,10 @@ export const PRODUCT_MOCK: IProduct = {
   price: 12000,
   currency: '$',
   variants: {
-    size: [
-      { pieces: '10 - 25', price: 115050.0, currency: 'AED' },
-      { pieces: '10 - 25', price: 1145.0, currency: '$' },
-      { pieces: '10 - 25', price: 1145.0, currency: '$' },
+    pieces: [
+      { range: '10 - 25', price: 115050.0, currency: 'AED' },
+      { range: '10 - 25', price: 1145.0, currency: '$' },
+      { range: '10 - 25', price: 1145.0, currency: '$' },
     ],
     colors: ['Red', 'Black', 'Green'],
     storage: [

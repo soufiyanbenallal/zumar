@@ -1,0 +1,20 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/global.scss';
+.pieces {
+  display: grid;
+  gap: px(43);
+  grid-template-columns: 1fr 1fr 1fr;
+
+  li {
+    .subtext {
+      font-size: px(12);
+      line-height: px(16);
+      margin-bottom: px(6);
+    }
+    .text {
+      font-size: px(24);
+      line-height: px(32);
+      font-family: $font-family-bold;
+    }
+  }
+}

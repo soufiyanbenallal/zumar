@@ -1,0 +1,34 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/global.scss';
+.wrapper {
+  .title {
+    font-family: $font-family-semibold;
+    font-size: px(20);
+    line-height: px(28);
+    color: $color-black;
+    margin-bottom: px(10);
+    padding: px(10) 0;
+    width: fit-content;
+  }
+  .colors {
+    display: flex;
+
+    .item {
+      display: flex;
+      align-items: center;
+      color: $color-black;
+      border-radius: $radius;
+      padding: px(10) px(20);
+      gap: px(10);
+      height: px(51);
+
+      cursor: pointer;
+      &.active {
+        background-color: $color-gray-1;
+      }
+      .imageColor {
+        border-radius: 5rem;
+      }
+    }
+  }
+}

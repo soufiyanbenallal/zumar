@@ -1,0 +1,10 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/global.scss';
+.footerDetails {
+  display: flex;
+  gap: 0.5rem;
+  .available {
+    font-size: px(12);
+    color: $color-gray-3;
+  }
+}
