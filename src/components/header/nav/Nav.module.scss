@@ -5,6 +5,46 @@
 .nav {
   @include v-center;
   gap: px(26);
+  .menu {
+    width: px(40);
+    height: px(40);
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    gap: px(9);
+    justify-content: center;
+    span {
+      width: px(32);
+      height: px(2);
+      background-color: #1e2432;
+    }
+  }
+  .bag {
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    height: px(31);
+    display: flex;
+    .badge {
+      font-size: px(8);
+      color: $color-white;
+      position: absolute;
+      top: px(4);
+      right: px(2);
+      display: block;
+      width: px(13);
+      height: px(13);
+      background-color: #ff374e;
+      box-shadow: 0 4px 11px #ff374e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5rem;
+    }
+  }
   .link {
     font-family: $font-family-medium;
     font-size: px(16);
