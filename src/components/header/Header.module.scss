@@ -1,12 +1,13 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 .header {
+  display: flex;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  background: $color-white;
+  padding: 20px 0;
+  .container {
     display: flex;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
-    background: $color-white;
-    .container {
-        display: flex;
-        justify-content: space-between;
-        @include container;
-    }
+    justify-content: space-between;
+    @include container;
+  }
 }

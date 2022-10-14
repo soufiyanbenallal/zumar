@@ -1,4 +1,15 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/global.scss';
+@import '../../../styles/mixins.scss';
+
 .nav {
-    display: flex;
-    // list-style: none;
+  @include v-center;
+  gap: px(26);
+  .link {
+    font-family: $font-family-medium;
+    font-size: px(16);
+    line-height: px(22);
+    color: black;
+    padding: px(10);
+  }
 }

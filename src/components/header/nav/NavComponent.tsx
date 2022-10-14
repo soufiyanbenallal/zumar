@@ -6,8 +6,10 @@ export default function NavComponent(): ReactElement {
     <ul className={styles.nav}>
       {HEADER_NAVIGATION.map(
         (link, key): ReactElement => (
-          <li className={styles.linkWrapper} key={key}>
-            <a href={link.path}>{link.name}</a>
+          <li key={key}>
+            <a className={styles.link} href={link.path}>
+              {link.name}
+            </a>
           </li>
         ),
       )}

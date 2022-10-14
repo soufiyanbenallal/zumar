@@ -1,0 +1,22 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/global.scss';
+@import '../../../styles/mixins.scss';
+.form {
+  display: flex;
+  align-items: center;
+  gap: px(10);
+  .control {
+    @include v-center;
+    gap: px(10);
+    input {
+      height: px(42);
+      font-size: px(16);
+      padding: 0 px(10);
+      min-width: px(400);
+      border: none;
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
