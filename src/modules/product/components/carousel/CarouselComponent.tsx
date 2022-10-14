@@ -3,9 +3,14 @@ import styles from './Carousel.module.scss'
 import { Swiper as SwiperComponent, SwiperSlide } from 'swiper/react'
 import Swipe, { Thumbs } from 'swiper'
 import classNames from 'classnames'
-import { LIST_IMAGES } from './Carousel.const'
 
-export default function CarouselComponent({ className }: { className?: string }): ReactElement {
+export default function CarouselComponent({
+  className,
+  images,
+}: {
+  className?: string
+  images: Array<string>
+}): ReactElement {
   const [thumbsSwiper, setThumbsSwiper] = useState<Swipe | null>(null)
 
   const handleThumbSwiper = useCallback((val: Swipe) => {
@@ -13,14 +18,14 @@ export default function CarouselComponent({ className }: { className?: string })
   }, [])
   const sliders = useCallback(
     (classes: string): ReactElement[] =>
-      LIST_IMAGES.map((url, key) => {
+      images.map((url, key) => {
         return (
           <SwiperSlide key={key} className={classes}>
             <img src={url} alt={url} loading='lazy' />
           </SwiperSlide>
         )
       }),
-    [],
+    [images],
   )
 
   return (

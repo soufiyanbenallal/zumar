@@ -1,0 +1,18 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/global.scss';
+.title {
+  font-family: $font-family-semibold;
+  font-size: px(24);
+  line-height: px(32);
+  color: $color-black;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  .code {
+    font-family: $font-family-medium;
+    font-size: px(16);
+    line-height: px(22);
+    color: $color-gray-2;
+  }
+}

@@ -1,17 +1,22 @@
+@import '../../../../styles/styles.scss';
 .container {
-    width: 100vw;
-    display: block;
-    position: relative;
+  width: 100vw;
+  display: block;
+  position: relative;
 
-    .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        .carousel {
-            flex: 1;
-        }
-        .details {
-            flex: 1;
-        }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    @include container;
+    .carousel {
+      flex: 1;
     }
+    .details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: px(30);
+    }
+  }
 }
