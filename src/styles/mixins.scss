@@ -15,6 +15,9 @@
   max-width: $max;
   margin: 0 auto;
   padding: 0 42px;
+  @include breakpoint-ipad {
+    padding: 0 15px;
+  }
 }
 
 @mixin v-center {

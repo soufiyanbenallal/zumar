@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   gap: px(10);
+
   .control {
     @include v-center;
     gap: px(10);
@@ -20,6 +21,9 @@
       outline: none;
       &::placeholder {
         color: rgba(0, 0, 0, 0.2);
+      }
+      @include breakpoint-ipad {
+        display: none;
       }
     }
   }

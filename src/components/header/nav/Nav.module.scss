@@ -5,6 +5,9 @@
 .nav {
   @include v-center;
   gap: px(26);
+  @include breakpoint-ipad {
+    gap: px(10);
+  }
   .menu {
     @include native-button;
     width: px(40);
@@ -47,5 +50,8 @@
     line-height: px(22);
     color: black;
     padding: px(10);
+    @include breakpoint-mobile {
+      display: none;
+    }
   }
 }

@@ -4,16 +4,27 @@
 .container {
   @include container;
   @include v-center;
-  height: px(85);
+  height: px(87);
   gap: px(10);
+  @include breakpoint-ipad {
+    gap: px(6);
+    height: px(67);
+  }
+  @include breakpoint-mobile {
+    height: px(50);
+    gap: px(3);
+  }
+  overflow-x: auto;
   .item {
     @include v-center;
     color: $color-gray-3;
     gap: px(7);
+    flex-wrap: nowrap;
     a {
       color: $color-gray-3;
       font-size: px(12);
       text-transform: capitalize;
+      white-space: nowrap;
     }
   }
 }

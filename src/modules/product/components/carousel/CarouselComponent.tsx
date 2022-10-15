@@ -50,7 +50,6 @@ export default function CarouselComponent({
   return (
     <article className={classNames(className, styles.carousel)}>
       <SwiperComponent
-        style={{ width: '100%' }}
         spaceBetween={5}
         navigation={false}
         thumbs={{
@@ -63,7 +62,6 @@ export default function CarouselComponent({
         {sliders(styles.slide)}
       </SwiperComponent>
       <SwiperComponent
-        style={{ width: '100%' }}
         onSwiper={handleThumbSwiper}
         spaceBetween={20}
         slidesPerView={4}

@@ -7,7 +7,7 @@ export default function FooterDetailsComponent({ total }: { total: number }): Re
   return (
     <div className={styles.wrapper}>
       <dd className={styles.total}>
-        <h4>TOTAL</h4>
+        <h4>Total</h4>
         <dl>{moneyFormat(total, 2)}</dl>
       </dd>
       <div className={styles.footerDetails}>

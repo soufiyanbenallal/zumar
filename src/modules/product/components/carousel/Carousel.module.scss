@@ -9,6 +9,7 @@
   overflow: hidden;
   gap: px(10);
   .swipeMain {
+    width: 100%;
     .slide {
       @include v-center;
       img {
@@ -19,6 +20,9 @@
   }
   .swipeThumb {
     padding: px(10);
+    width: 100%;
+    max-width: 570px;
+
     .slide {
       cursor: pointer;
       &.active img {

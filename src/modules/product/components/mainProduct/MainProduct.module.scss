@@ -10,6 +10,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    @include breakpoint-ipad {
+      grid-template-columns: 1fr;
+    }
     @include container;
     .carousel {
       flex: 1;

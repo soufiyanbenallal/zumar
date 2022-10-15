@@ -12,6 +12,10 @@
   .flex {
     display: flex;
     gap: px(52);
+    @include breakpoint-mobile {
+      gap: px(15);
+      flex-wrap: wrap;
+    }
     .code {
       @include v-center;
       font-family: $font-family-medium;

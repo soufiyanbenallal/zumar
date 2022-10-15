@@ -1,10 +1,14 @@
 @import '../../../../../styles/variables.scss';
+@import '../../../../../styles/mixins.scss';
 @import '../../../../../styles/global.scss';
 .pieces {
   display: grid;
   gap: px(43);
   grid-template-columns: 1fr 1fr 1fr;
-
+  @include breakpoint-mobile {
+    display: flex;
+    flex-wrap: wrap;
+  }
   li {
     display: grid;
     gap: px(6);
