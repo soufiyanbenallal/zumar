@@ -7,6 +7,11 @@ import { COLOR_IMAGE } from './Colors.const'
 export default function ColorsComponent({ colors }: { colors: string[] }): ReactElement {
   const [color, setColor] = useState(colors[0])
 
+  /**
+   * render Image and get right image according to color name
+   *
+   * @param {string} name - color name
+   */
   const imageColor = (name: string): ReactElement => {
     const src = COLOR_IMAGE[name]
     return <img src={src} alt={name} className={styles.imageColor} />

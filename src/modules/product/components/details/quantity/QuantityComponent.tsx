@@ -12,6 +12,11 @@ export default function QuantityComponent({
 }: IQuantityProps): ReactElement {
   const [quantity, setQuantity] = useState(1)
 
+  /**
+   * This func used to calculate the total price
+   *
+   * @param {MouseEvent<HTMLButtonElement>} - event to prevent form
+   */
   const decrement = useCallback((e: MouseEvent<HTMLButtonElement>): void => {
     e.preventDefault()
     setQuantity((val) => (val > 1 ? --val : 1))

@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback, useMemo, useState } from 'react'
+import React, { ReactElement, useCallback, useState } from 'react'
 import styles from './Carousel.module.scss'
 import { Swiper as SwiperComponent, SwiperSlide } from 'swiper/react'
 import Swipe, { Thumbs } from 'swiper'
@@ -14,6 +14,11 @@ export default function CarouselComponent({
   const [thumbsSwiper, setThumbsSwiper] = useState<Swipe | null>(null)
   const [activeIndex, setActiveIndex] = useState<number>(0)
 
+  /**
+   * bind between thumbs and main carousels
+   *
+   * @param {string} classes - selected image
+   */
   const handleThumbSwiper = useCallback((val: Swipe) => {
     setThumbsSwiper(val)
   }, [])
@@ -24,7 +29,7 @@ export default function CarouselComponent({
    * @param {string} classes - selected image
    */
   const sliders = useCallback(
-    (classes: string, thumb = false): ReactElement[] =>
+    (classes: string): ReactElement[] =>
       images.map((url, key) => {
         return (
           <SwiperSlide
@@ -70,7 +75,7 @@ export default function CarouselComponent({
         modules={[Thumbs]}
         className={styles.swipeThumb}
       >
-        {sliders(styles.slide, true)}
+        {sliders(styles.slide)}
       </SwiperComponent>
     </article>
   )

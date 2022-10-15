@@ -1,14 +1,19 @@
+import React, { Fragment, ReactElement, useEffect, useState } from 'react'
 import { IShipping } from '@modules/product/interfaces'
 import { RadioGroup } from '@headlessui/react'
 import classNames from 'classnames'
-import React, { Fragment, ReactElement, useEffect, useState } from 'react'
-import styles from './Shipping.module.scss'
 import { moneyFormat } from '@/utils'
+import styles from './Shipping.module.scss'
 import { IShippingProps } from './ShippingInterface'
 
 export default function ShippingComponent({ shippings, onChange }: IShippingProps): ReactElement {
   const [shipping, setShipping] = useState(shippings[1])
 
+  /**
+   * This life cycle listing to changes of shipping type and send price to parent component for calculation total
+   *
+   * @hooks {number} - total price
+   */
   useEffect(() => {
     onChange?.(shipping.price || 0)
   }, [onChange, shipping])

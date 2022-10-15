@@ -1,8 +1,8 @@
+import React, { Fragment, ReactElement, useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import { IStorage } from '@modules/product/interfaces'
 import classNames from 'classnames'
 import styles from './Storage.module.scss'
-import React, { Fragment, ReactElement, useState } from 'react'
 
 export default function StorageComponent({ storages }: { storages: IStorage[] }): ReactElement {
   const [storage, setStorage] = useState(storages[0])

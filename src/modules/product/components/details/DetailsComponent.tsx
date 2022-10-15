@@ -1,5 +1,5 @@
+import React, { ReactElement, useMemo, useState } from 'react'
 import classNames from 'classnames'
-import React, { ReactElement, useCallback, useEffect, useMemo, useState } from 'react'
 import ColorsComponent from './colors/ColorsComponent'
 import { IDetailsProps } from './Details.interface'
 import styles from './Details.module.scss'
@@ -13,6 +13,12 @@ import StorageComponent from './storage/StorageComponent'
 export default function DetailsComponent({ className, product }: IDetailsProps): ReactElement {
   const [quantity, setQuantity] = useState(1)
   const [shipping, setShipping] = useState(0)
+
+  /**
+   * This func used to calculate the total price
+   *
+   * @return {number} - total price
+   */
   const total = useMemo(
     () => product.price * quantity + (shipping || 0),
     [product.price, quantity, shipping],
