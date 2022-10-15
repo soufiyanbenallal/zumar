@@ -3,8 +3,9 @@
 @import '../../../../../styles/mixins.scss';
 .rate {
   display: flex;
+  gap: px(28);
   .count {
-    font-family: $font-family-semibold;
+    font-family: $font-family;
     font-size: px(18);
     line-height: px(32);
     @include v-center;
@@ -15,4 +16,8 @@
 }
 .stars {
   @include v-center;
+  span {
+    @include v-center;
+  }
+  gap: px(8);
 }

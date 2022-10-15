@@ -3,7 +3,7 @@ import image6 from '@assets/images/image 6.png'
 import image7 from '@assets/images/image 7.png'
 import image8 from '@assets/images/image 8.png'
 import { IProduct } from '../interfaces/ProductInterface'
-export const LIST_IMAGES = [image5, image6, image7, image8]
+export const LIST_IMAGES = [image5, image6, image7]
 
 export const PRODUCT_MOCK: IProduct = {
   id: '1',

@@ -48,6 +48,7 @@ export default function CarouselComponent({
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
+        centeredSlides={true}
         watchSlidesProgress={true}
         modules={[Thumbs]}
         className={styles.swipeThumb}
