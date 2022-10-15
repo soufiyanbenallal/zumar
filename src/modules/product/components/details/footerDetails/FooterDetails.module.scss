@@ -1,10 +1,35 @@
 @import '../../../../../styles/variables.scss';
+@import '../../../../../styles/mixins.scss';
 @import '../../../../../styles/global.scss';
-.footerDetails {
-  display: flex;
-  gap: 0.5rem;
-  .available {
-    font-size: px(12);
-    color: $color-gray-3;
+.wrapper {
+  .total {
+    @include v-center;
+    gap: px(10);
+    h4 {
+      font-family: $font-family-semibold;
+      font-size: px(20);
+      line-height: px(28);
+      color: $color-black;
+      padding: px(10) 0;
+      width: fit-content;
+    }
+    dl {
+      font-family: $font-family-semibold;
+      font-size: px(24);
+      line-height: px(32);
+      color: $primary-color-green;
+    }
+  }
+  .footerDetails {
+    @include v-center;
+    gap: 0.5rem;
+    .button {
+      height: px(48);
+    }
+    .available {
+      font-size: px(12);
+      color: $color-gray-3;
+      padding: px(10) px(20);
+    }
   }
 }

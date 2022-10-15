@@ -1,12 +1,30 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/global.scss';
 .carousel {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   overflow: hidden;
-  .slideMain img {
-    width: 100%;
+  gap: px(10);
+  .swipeMain {
+    .slide {
+      @include v-center;
+      img {
+        width: 100%;
+        border-radius: px(20);
+      }
+    }
   }
-  .slideThumb img {
-    width: 100%;
+  .swipeThumb {
+    padding: px(10);
+    .slide {
+      @include v-center;
+      img {
+        width: 100%;
+        border-radius: px(20);
+      }
+    }
   }
 }

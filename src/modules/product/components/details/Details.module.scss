@@ -1,20 +1,27 @@
 @import '../../../../styles/variables.scss';
 @import '../../../../styles/global.scss';
 @import '../../../../styles/mixins.scss';
-.title {
-  font-family: $font-family-semibold;
-  font-size: px(24);
-  line-height: px(32);
-  color: $color-black;
-}
-.flex {
-  display: flex;
-  gap: px(52);
-  .code {
-    @include v-center;
-    font-family: $font-family-medium;
-    font-size: px(16);
-    line-height: px(22);
-    color: $color-gray-2;
+.wrapper {
+  .title {
+    font-family: $font-family-semibold;
+    font-size: px(24);
+    line-height: px(32);
+    color: $color-black;
+  }
+  .flex {
+    display: flex;
+    gap: px(52);
+    .code {
+      @include v-center;
+      font-family: $font-family-medium;
+      font-size: px(16);
+      line-height: px(22);
+      color: $color-gray-2;
+    }
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: px(10);
   }
 }

@@ -1,0 +1,47 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/global.scss';
+@import '../../../../../styles/mixins.scss';
+.wrapper {
+  .title {
+    font-family: $font-family-semibold;
+    font-size: px(20);
+    line-height: px(28);
+    color: $color-black;
+    margin-bottom: px(10);
+    padding: px(10) 0;
+    width: fit-content;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: px(10);
+    .item {
+      display: flex;
+      align-items: center;
+      color: $color-black;
+      border-radius: $radius;
+      padding: px(10) px(20);
+      gap: px(10);
+      height: px(46);
+      cursor: pointer;
+      .title {
+        color: $color-black;
+        font-size: px(18);
+        line-height: px(26);
+        font-family: $font-family-semibold;
+        @include v-center;
+        gap: px(10);
+        margin: 0;
+        .estimated {
+          font-size: px(12);
+          line-height: px(16);
+          font-family: $font-family;
+          color: $color-gray-3;
+        }
+      }
+      &.active {
+        background-color: $color-gray-1;
+      }
+    }
+  }
+}

@@ -38,9 +38,9 @@ export default function CarouselComponent({
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
         modules={[Thumbs]}
-        className='mySwiper2'
+        className={styles.swipeMain}
       >
-        {sliders(styles.slideMain)}
+        {sliders(styles.slide)}
       </SwiperComponent>
       <SwiperComponent
         style={{ width: '100%' }}
@@ -50,9 +50,9 @@ export default function CarouselComponent({
         freeMode={true}
         watchSlidesProgress={true}
         modules={[Thumbs]}
-        className='mySwiper'
+        className={styles.swipeThumb}
       >
-        {sliders(styles.slideThumb)}
+        {sliders(styles.slide)}
       </SwiperComponent>
     </article>
   )

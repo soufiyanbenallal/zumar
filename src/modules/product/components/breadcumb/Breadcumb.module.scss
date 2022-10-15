@@ -12,6 +12,8 @@
     gap: px(10);
     a {
       color: $color-gray-3;
+      font-size: px(12);
+      text-transform: capitalize;
     }
   }
 }

@@ -15,6 +15,7 @@ export const PRODUCT_MOCK: IProduct = {
   },
   images: LIST_IMAGES,
   price: 12000,
+  quantity: 51,
   currency: '$',
   variants: {
     pieces: [

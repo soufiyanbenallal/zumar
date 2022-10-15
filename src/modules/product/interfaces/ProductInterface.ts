@@ -22,8 +22,9 @@ export interface IProduct {
   title: string
   code: string
   rate: IRate
-  images: Array<string>
+  images: string[]
   price: number
+  quantity: number
   currency: keyof typeof CurrencyEnum
   variants: {
     pieces: IPieces[]

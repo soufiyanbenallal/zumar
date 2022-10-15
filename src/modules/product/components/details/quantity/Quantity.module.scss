@@ -1,0 +1,50 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/global.scss';
+@import '../../../../../styles/mixins.scss';
+.wrapper {
+  .title {
+    font-family: $font-family-semibold;
+    font-size: px(20);
+    line-height: px(28);
+    color: $color-black;
+    margin-bottom: px(10);
+    padding: px(10) 0;
+    width: fit-content;
+  }
+  .quantity {
+    @include v-center;
+    padding: px(10);
+    gap: px(10);
+    .buttonWrapper {
+      padding: px(9) px(12);
+      background-color: $color-gray-1;
+      border-radius: 5rem;
+      width: fit-content;
+      @include v-center;
+      height: px(44);
+      .decrement {
+        @include native-button;
+      }
+      .input {
+        width: px(27);
+        @include native-button;
+        text-align: center;
+        /* Firefox */
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+      .increment {
+        @include native-button;
+      }
+    }
+    .totalQuantity {
+      p {
+        padding: px(10);
+      }
+    }
+  }
+}
