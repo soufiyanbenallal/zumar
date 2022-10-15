@@ -6,6 +6,8 @@
   grid-template-columns: 1fr 1fr 1fr;
 
   li {
+    display: grid;
+    gap: px(6);
     .subtext {
       font-size: px(12);
       line-height: px(16);

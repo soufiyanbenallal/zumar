@@ -28,7 +28,7 @@ export default function DetailsComponent({ className, product }: IDetailsProps):
       <ColorsComponent colors={product.variants.colors} />
       <StorageComponent storages={product.variants.storage} />
       <div className={styles.box}>
-        <QuantityComponent totalQuantity={product.quantity} />
+        <QuantityComponent totalQuantity={product.quantity} price={product.price} />
         <ShippingComponent shippings={product.variants.shipping} />
         <FooterDetailsComponent />
       </div>

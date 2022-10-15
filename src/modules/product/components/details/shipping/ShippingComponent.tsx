@@ -3,12 +3,16 @@ import { RadioGroup } from '@headlessui/react'
 import classNames from 'classnames'
 import React, { Fragment, ReactElement, useState } from 'react'
 import styles from './Shipping.module.scss'
+import { moneyFormat } from '@/utils'
 
 export default function ShippingComponent({ shippings }: { shippings: IShipping[] }): ReactElement {
   const [shipping, setShipping] = useState(shippings[0])
   return (
     <div className={styles.wrapper}>
-      <h5 className={styles.title}>Shipping</h5>
+      <h5 className={styles.title}>
+        Shipping
+        <span className={styles.price}>{moneyFormat(shipping.price, 0)}</span>{' '}
+      </h5>
       <RadioGroup
         value={shipping}
         onChange={setShipping}

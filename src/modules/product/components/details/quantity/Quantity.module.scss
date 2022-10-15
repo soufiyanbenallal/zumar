@@ -10,6 +10,14 @@
     margin-bottom: px(10);
     padding: px(10) 0;
     width: fit-content;
+    @include v-center;
+    gap: px(10);
+    .price {
+      font-family: $font-family-medium;
+      color: $color-red-1;
+      font-size: px(18);
+      line-height: px(26);
+    }
   }
   .quantity {
     @include v-center;
