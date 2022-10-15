@@ -20,10 +20,17 @@
   .swipeThumb {
     padding: px(10);
     .slide {
+      cursor: pointer;
+      &.active img {
+        aspect-ratio: 1 / 1;
+        // transition: all $time-slow ease-in-out;
+      }
       @include v-center;
       img {
         width: 100%;
         border-radius: px(20);
+        aspect-ratio: 122 / 105;
+        object-fit: cover;
       }
     }
   }
