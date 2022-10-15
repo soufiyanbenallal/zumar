@@ -28,4 +28,24 @@
       }
     }
   }
+  &.isModal {
+    .control input {
+      @include breakpoint-ipad {
+        display: block;
+      }
+    }
+    .categories {
+      button {
+        min-width: fit-content;
+      }
+      ul {
+        left: 0;
+      }
+      input {
+      }
+      @include breakpoint-mobile {
+        display: block;
+      }
+    }
+  }
 }

@@ -4,10 +4,16 @@ import { IBaseProps } from '@/interfaces'
 import { ReactComponent as SearchIcon } from '@assets/icons/SearchIcon.svg'
 import styles from './Search.module.scss'
 import classNames from 'classnames'
-export default function SearchComponent({ className }: IBaseProps): ReactElement {
+interface ISearchProps extends IBaseProps {
+  isModal?: boolean
+}
+export default function SearchComponent({
+  className,
+  isModal = false,
+}: ISearchProps): ReactElement {
   return (
-    <form className={classNames(styles.form, className)}>
-      <CategoriesComponent />
+    <form className={classNames(styles.form, className, isModal && styles.isModal)}>
+      <CategoriesComponent className={styles.categories} />
       <div className={styles.control}>
         <button>
           <SearchIcon />

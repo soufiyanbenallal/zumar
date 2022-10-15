@@ -7,6 +7,7 @@ import styles from './MenuModal.module.scss'
 import { ILink } from '@/components/header/nav/NavComponent'
 import { HEADER_NAVIGATION } from '@/components/header/Header.const'
 import { MenuEnum } from '@/components/header/Header.enum'
+import SearchComponent from '@/components/header/search/SearchComponent'
 
 export default function MenuModalComponent(): ReactElement {
   const { menuModalOpen, setMenuModalOpen } = useContext<IAppContext>(Context)
@@ -30,7 +31,7 @@ export default function MenuModalComponent(): ReactElement {
             x
           </Button>
         </h2>
-
+        <SearchComponent isModal={true} />
         <ul className={styles.nav}>
           {HEADER_NAVIGATION.map((link, key): ReactElement => renderLink(link, key))}
         </ul>
