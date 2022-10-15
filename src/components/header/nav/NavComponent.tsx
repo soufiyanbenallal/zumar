@@ -1,21 +1,26 @@
-import React, { ReactElement, useCallback } from 'react'
+import React, { ReactElement, useCallback, useContext } from 'react'
 import styles from './Nav.module.scss'
 import { HEADER_NAVIGATION } from '@components/header/Header.const'
 import { ReactComponent as BagIcon } from '@assets/icons/BagIcon.svg'
 import { MenuEnum, MenuPathEnum } from '../Header.enum'
+import classNames from 'classnames'
+import { IAppContext, IBaseProps } from '@/interfaces'
+import { Context } from '@/context'
 export interface ILink {
   name: MenuEnum
   path: MenuPathEnum
 }
-export default function NavComponent(): ReactElement {
+export default function NavComponent({ className }: IBaseProps): ReactElement {
+  const { setMenuModalOpen } = useContext<IAppContext>(Context)
+
   const MenuIcon = useCallback((): ReactElement => {
     return (
-      <button className={styles.menu}>
+      <button className={styles.menu} onClick={() => setMenuModalOpen?.(true)}>
         <span></span>
         <span></span>
       </button>
     )
-  }, [])
+  }, [setMenuModalOpen])
   const renderLink = (link: ILink): ReactElement => {
     switch (link.name) {
       case MenuEnum.BAG:
@@ -39,7 +44,7 @@ export default function NavComponent(): ReactElement {
   }
 
   return (
-    <ul className={styles.nav}>
+    <ul className={classNames(styles.nav, className)}>
       {HEADER_NAVIGATION.map(
         (link, key): ReactElement => (
           <li key={key}>{renderLink(link)}</li>

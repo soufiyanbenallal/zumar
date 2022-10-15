@@ -8,9 +8,9 @@ export default function HeaderComponent(): ReactElement {
   return (
     <header className={styles.header}>
       <nav className={styles.container}>
-        <LogoIcon />
-        <SearchComponent />
-        <NavComponent />
+        <LogoIcon className={styles.logo} />
+        <SearchComponent className={styles.search} />
+        <NavComponent className={styles.nav} />
       </nav>
     </header>
   )

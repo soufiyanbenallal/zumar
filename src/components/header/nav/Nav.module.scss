@@ -50,6 +50,8 @@
     line-height: px(22);
     color: black;
     padding: px(10);
+  }
+  li:has(.link) {
     @include breakpoint-mobile {
       display: none;
     }

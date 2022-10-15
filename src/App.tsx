@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react'
 import MainLayout from '@layouts/main/MainLayout'
 import { MainProductComponent } from '@modules/product'
+import AppContext from './context/modals/AppContext'
 function App(): ReactElement {
   return (
-    <>
+    <AppContext>
       <MainLayout>
         {/* 
           // * Here Where you need to add routers from react-router-dom 
@@ -19,7 +20,7 @@ function App(): ReactElement {
         */}
         <MainProductComponent />
       </MainLayout>
-    </>
+    </AppContext>
   )
 }
 

@@ -1,13 +1,29 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
+@import '../../styles/global.scss';
 .header {
   display: flex;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
   background: $color-white;
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   .container {
     display: flex;
     justify-content: space-between;
     @include container;
+    @include breakpoint-mobile {
+      .logo {
+        order: 1;
+      }
+      .search {
+        order: 0;
+        width: px(80);
+      }
+      .nav {
+        order: 3;
+      }
+    }
   }
 }

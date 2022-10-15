@@ -16,7 +16,8 @@
       height: px(42);
       font-size: px(16);
       padding: 0 px(10);
-      min-width: px(400);
+      max-width: px(400);
+      width: 100%;
       border: none;
       outline: none;
       &::placeholder {

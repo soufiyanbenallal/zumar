@@ -35,3 +35,14 @@
   outline: none;
   cursor: pointer;
 }
+
+@mixin modal {
+  background-color: $color-white;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 200;
+}

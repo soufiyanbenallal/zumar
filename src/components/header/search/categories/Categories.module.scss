@@ -3,6 +3,9 @@
 @import '../../../../styles/mixins.scss';
 .wrapper {
   position: relative;
+  @include breakpoint-mobile {
+    display: none;
+  }
   .button {
     @include v-center;
     background-color: transparent;
