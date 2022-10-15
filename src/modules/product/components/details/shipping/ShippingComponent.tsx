@@ -1,12 +1,18 @@
 import { IShipping } from '@modules/product/interfaces'
 import { RadioGroup } from '@headlessui/react'
 import classNames from 'classnames'
-import React, { Fragment, ReactElement, useState } from 'react'
+import React, { Fragment, ReactElement, useEffect, useState } from 'react'
 import styles from './Shipping.module.scss'
 import { moneyFormat } from '@/utils'
+import { IShippingProps } from './ShippingInterface'
 
-export default function ShippingComponent({ shippings }: { shippings: IShipping[] }): ReactElement {
-  const [shipping, setShipping] = useState(shippings[0])
+export default function ShippingComponent({ shippings, onChange }: IShippingProps): ReactElement {
+  const [shipping, setShipping] = useState(shippings[1])
+
+  useEffect(() => {
+    onChange?.(shipping.price || 0)
+  }, [onChange, shipping])
+
   return (
     <div className={styles.wrapper}>
       <h5 className={styles.title}>

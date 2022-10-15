@@ -2,12 +2,13 @@ import Button from '@components/Button/Button'
 import React, { ReactElement } from 'react'
 import { ReactComponent as CallUsIcon } from '@assets/icons/CallUsIcon.svg'
 import styles from './FooterDetails.module.scss'
-export default function FooterDetailsComponent(): ReactElement {
+import { moneyFormat } from '@/utils'
+export default function FooterDetailsComponent({ total }: { total: number }): ReactElement {
   return (
     <div className={styles.wrapper}>
       <dd className={styles.total}>
         <h4>TOTAL</h4>
-        <dl>{/* {product.currency} {total} */}</dl>
+        <dl>{moneyFormat(total, 2)}</dl>
       </dd>
       <div className={styles.footerDetails}>
         <Button type='primary' className={styles.button}>
