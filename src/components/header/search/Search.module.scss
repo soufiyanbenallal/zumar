@@ -17,7 +17,7 @@
       font-size: px(16);
       padding: 0 px(10);
       max-width: px(400);
-      width: 100%;
+      width: px(400);
       border: none;
       outline: none;
       &::placeholder {
@@ -30,8 +30,10 @@
   }
   &.isModal {
     .control input {
+      max-width: px(300);
       @include breakpoint-ipad {
         display: block;
+        width: 100%;
       }
     }
     .categories {
