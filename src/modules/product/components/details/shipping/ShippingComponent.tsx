@@ -38,7 +38,9 @@ export default function ShippingComponent({ shippings, onChange }: IShippingProp
                 <li className={classNames(styles.item, checked && styles.active)}>
                   <p className={styles.title}>
                     {item.title}{' '}
-                    <small className={styles.estimated}>Estimated {item.estimated} days</small>
+                    <small className={styles.estimated}>
+                      Estimated {item.estimated[0]} - {item.estimated[1]} days
+                    </small>
                   </p>
                 </li>
               )}

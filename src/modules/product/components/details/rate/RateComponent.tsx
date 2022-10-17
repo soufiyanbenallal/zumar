@@ -9,12 +9,7 @@ function RateComponent({ rate }: { rate: IRate }): ReactElement {
   }
   return (
     <div className={styles.rate}>
-      <StarRatingComponent
-        size={40}
-        value={rating}
-        inactiveColor={'#ddd'}
-        onChange={handleChange}
-      />
+      <StarRatingComponent value={rating} inactiveColor={'#ddd'} onChange={handleChange} />
       <p className={styles.count}>
         {rate.value}
         <span className={styles.votes}>({rate.votes})</span>

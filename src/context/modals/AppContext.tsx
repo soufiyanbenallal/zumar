@@ -1,11 +1,11 @@
-import React, { ReactElement, useState } from 'react'
+import React, { createContext, ReactElement, useState } from 'react'
 import { IAppContext, IBaseProps } from '@/interfaces'
 
 const INITIAL_STATE: IAppContext = {
   menuModalOpen: false,
 }
 
-export const Context = React.createContext(INITIAL_STATE)
+export const Context = createContext(INITIAL_STATE)
 
 export default function AppContext({ children }: IBaseProps): ReactElement {
   const [menuModalOpen, setMenuModalOpen] = useState(false)

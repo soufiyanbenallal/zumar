@@ -6,19 +6,11 @@ interface IStarRatingProps {
   count?: number
   inactiveColor?: string
   value: number
-  size?: number
   activeColor?: string
   onChange: (val: number) => void
 }
 export default function StarRatingComponent(props: IStarRatingProps): ReactElement {
-  const {
-    count = 5,
-    value,
-    inactiveColor = '#F9C744',
-    size = 24,
-    activeColor = '#F9C744',
-    onChange,
-  } = props
+  const { count = 5, value, inactiveColor = '#F9C744', activeColor = '#F9C744', onChange } = props
   // short trick
   const stars = Array.from({ length: count }, (key: number) => <StarIcon key={key} />)
 
