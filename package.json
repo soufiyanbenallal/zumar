@@ -2,31 +2,11 @@
   "name": "zumar",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@craco/craco": "^6.4.5",
-    "@headlessui/react": "^1.7.3",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "classnames": "^2.3.2",
-    "node-sass": "^7.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "swiper": "^8.4.4",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint": "npx eslint src test",
-    "lint:fix": "npm run lint -- --fix"
+    "eject": "craco eject"
   },
   "browserslist": {
     "production": [
@@ -42,21 +22,25 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.66",
-    "@typescript-eslint/eslint-plugin": "^5.40.0",
-    "eslint": "^8.25.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
-    "eslint-import-resolver-typescript": "^3.5.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.3.0",
-    "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-react": "^7.31.10",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "prettier": "2.7.1",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/react": "^18.0.21",
+    "@craco/craco": "^6.4.5",
+    "node-sass": "^7.0.3",
+    "@types/react-dom": "^18.0.6"
   },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+  "dependencies": {
+    "@headlessui/react": "^1.7.3",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "swiper": "^8.4.4",
+    "web-vitals": "^2.1.4"
   }
 }
